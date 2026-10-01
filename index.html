@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>바른철거 | 사진으로 철거 견적 — 하남·강동·송파·경기광주</title>
+<meta name="description" content="현장 사진 3장을 문자로 보내주시면 철거 견적을 먼저 알려드립니다. 상가·식당·사무실·아파트 철거, 원상복구. 항목별 단가 공개.">
+<meta property="og:title" content="바른철거 — 사진 3장이면 철거 견적 먼저">
+<meta property="og:description" content="방문 전에 문자로 사진만 보내주세요. 항목별로 적어서 알려드립니다.">
+<meta name="theme-color" content="#1b3a5c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1b3a5c;--navy2:#13293f;--gold:#f5c93b;--ink:#15202b;--sub:#4a5866;--line:#dfe4ea;--bg:#f6f7f9;--card:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:"Noto Sans KR",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;padding-bottom:84px;word-break:keep-all}
+a{color:inherit}
+.wrap{max-width:640px;margin:0 auto;padding:0 18px}
+header{background:var(--navy);color:#fff}
+.top{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:19px;text-decoration:none}
+.badge{width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-weight:900;font-size:14px}
+.top a.call{background:var(--gold);color:var(--navy);font-weight:900;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:15px}
+.hero{background:var(--navy);color:#fff;padding:26px 0 34px}
+.hero .tag{display:inline-block;background:rgba(245,201,59,.16);color:var(--gold);font-weight:700;font-size:14px;padding:4px 10px;border-radius:6px;margin-bottom:12px}
+.hero h1{font-size:31px;line-height:1.3;font-weight:900;letter-spacing:-.5px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{margin-top:12px;font-size:17px;color:#dbe4ee}
+.hero .cta{display:block;margin-top:22px;background:var(--gold);color:var(--navy);text-align:center;font-weight:900;font-size:19px;padding:17px;border-radius:12px;text-decoration:none}
+section{padding:30px 0 6px}
+h2{font-size:22px;font-weight:900;margin-bottom:14px;letter-spacing:-.3px}
+.steps{display:grid;gap:10px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 16px;display:flex;gap:14px;align-items:flex-start}
+.step b.n{flex:none;width:32px;height:32px;border-radius:50%;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-weight:900}
+.step strong{display:block;font-size:17px}
+.step span{color:var(--sub);font-size:15px}
+form{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.f{margin-bottom:18px}
+.f>label,.f>.lab{display:block;font-weight:700;font-size:16px;margin-bottom:8px}
+.f small{color:var(--sub);font-weight:400}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips label{border:1.5px solid var(--line);border-radius:999px;padding:9px 14px;font-size:15px;cursor:pointer;background:#fff;user-select:none}
+.chips input:checked+label{border-color:var(--navy);background:var(--navy);color:#fff;font-weight:700}
+.chips input:focus-visible+label{outline:3px solid var(--gold)}
+input[type=number],input[type=text],textarea{width:100%;font:inherit;font-size:16px;border:1.5px solid var(--line);border-radius:10px;padding:12px;background:#fff}
+textarea{min-height:76px;resize:vertical}
+.go{width:100%;border:0;background:var(--navy);color:#fff;font:inherit;font-weight:900;font-size:19px;padding:17px;border-radius:12px;cursor:pointer}
+.go small{display:block;font-weight:400;font-size:13px;color:var(--gold);margin-top:2px}
+.note{font-size:14px;color:var(--sub);margin-top:12px}
+.preview{display:none;margin-top:14px;background:#f1f4f8;border-radius:10px;padding:12px;font-size:14px;white-space:pre-wrap}
+.preview.on{display:block}
+.copy{margin-top:8px;border:1.5px solid var(--navy);background:#fff;color:var(--navy);font:inherit;font-weight:700;padding:9px 14px;border-radius:8px;cursor:pointer}
+.tips{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tip{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.tip strong{display:block;font-size:16px}
+.tip span{font-size:14px;color:var(--sub)}
+.why{display:grid;gap:10px}
+.why div{background:var(--card);border-left:4px solid var(--gold);border-radius:8px;padding:13px 15px}
+.why strong{display:block}
+.why span{font-size:15px;color:var(--sub)}
+.box{background:#fff8de;border:1px solid #f0dc91;border-radius:12px;padding:16px;font-size:15px}
+.box strong{display:block;font-size:17px;margin-bottom:4px}
+.area{font-size:15px;color:var(--sub)}
+.area b{color:var(--ink)}
+footer{margin-top:34px;background:var(--navy2);color:#b9c6d3;font-size:14px;padding:22px 0}
+footer b{color:#fff}
+.bar{position:fixed;left:0;right:0;bottom:0;display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid var(--line);z-index:9}
+.bar a{flex:1;text-align:center;font-weight:900;font-size:17px;padding:14px 0;border-radius:10px;text-decoration:none}
+.bar .b1{background:#fff;border:2px solid var(--navy);color:var(--navy)}
+.bar .b2{background:var(--navy);color:#fff}
+@media (min-width:600px){.hero h1{font-size:38px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <a class="brand" href="#"><span class="badge">BR</span>바른철거</a>
+    <a class="call" href="tel:01027689135">전화하기</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">하남 · 강동 · 송파 · 경기광주</span>
+    <h1>사진 3장이면<br><em>철거 견적</em> 먼저 드립니다</h1>
+    <p>방문 약속 잡기 전에, 문자로 현장 사진만 보내주세요.<br>어디를 얼마에 뜯는지 항목별로 적어서 알려드립니다.</p>
+    <a class="cta" href="#quote">사진으로 견적 받기</a>
+  </div>
+</div>
+
+<main class="wrap">
+  <section>
+    <h2>이렇게 진행됩니다</h2>
+    <div class="steps">
+      <div class="step"><b class="n">1</b><div><strong>아래 칸을 골라주세요</strong><span>지역·공간·평수 정도면 충분합니다. 30초면 끝납니다.</span></div></div>
+      <div class="step"><b class="n">2</b><div><strong>문자 창에 사진을 붙여 보내주세요</strong><span>버튼을 누르면 내용이 채워진 문자 창이 열립니다. 사진만 첨부하시면 됩니다.</span></div></div>
+      <div class="step"><b class="n">3</b><div><strong>항목별 예상 금액을 받습니다</strong><span>사진으로 판단이 어려운 부분만 방문해서 확인합니다.</span></div></div>
+    </div>
+  </section>
+
+  <section id="quote">
+    <h2>견적 요청</h2>
+    <form id="qf" onsubmit="return go(event)">
+      <div class="f">
+        <span class="lab">지역</span>
+        <div class="chips" data-name="지역">
+          <input type="radio" name="area" id="a1" value="하남"><label for="a1">하남</label>
+          <input type="radio" name="area" id="a2" value="강동"><label for="a2">강동</label>
+          <input type="radio" name="area" id="a3" value="송파"><label for="a3">송파</label>
+          <input type="radio" name="area" id="a4" value="경기광주"><label for="a4">경기광주</label>
+          <input type="radio" name="area" id="a5" value="그 외"><label for="a5">그 외</label>
+        </div>
+      </div>
+      <div class="f">
+        <span class="lab">어떤 공간인가요</span>
+        <div class="chips">
+          <input type="radio" name="space" id="s1" value="식당·카페"><label for="s1">식당·카페</label>
+          <input type="radio" name="space" id="s2" value="상가·매장"><label for="s2">상가·매장</label>
+          <input type="radio" name="space" id="s3" value="사무실"><label for="s3">사무실</label>
+          <input type="radio" name="space" id="s4" value="아파트·주택"><label for="s4">아파트·주택</label>
+          <input type="radio" name="space" id="s5" value="기타"><label for="s5">기타</label>
+        </div>
+      </div>
+      <div class="f">
+        <label for="py">대략 평수 <small>(모르시면 비워두세요)</small></label>
+        <input type="number" id="py" inputmode="numeric" min="1" max="999" placeholder="예: 25">
+      </div>
+      <div class="f">
+        <span class="lab">필요한 작업 <small>(여러 개 선택)</small></span>
+        <div class="chips">
+          <input type="checkbox" name="job" id="j1" value="전체 철거"><label for="j1">전체 철거</label>
+          <input type="checkbox" name="job" id="j2" value="원상복구"><label for="j2">원상복구</label>
+          <input type="checkbox" name="job" id="j3" value="천장"><label for="j3">천장</label>
+          <input type="checkbox" name="job" id="j4" value="벽·가벽"><label for="j4">벽·가벽</label>
+          <input type="checkbox" name="job" id="j5" value="주방"><label for="j5">주방</label>
+          <input type="checkbox" name="job" id="j6" value="욕실"><label for="j6">욕실</label>
+          <input type="checkbox" name="job" id="j7" value="간판"><label for="j7">간판</label>
+          <input type="checkbox" name="job" id="j8" value="폐기물만"><label for="j8">폐기물만</label>
+        </div>
+      </div>
+      <div class="f">
+        <span class="lab">언제까지 끝나야 하나요</span>
+        <div class="chips">
+          <input type="radio" name="when" id="w1" value="이번 주"><label for="w1">이번 주</label>
+          <input type="radio" name="when" id="w2" value="2주 안"><label for="w2">2주 안</label>
+          <input type="radio" name="when" id="w3" value="한 달 안"><label for="w3">한 달 안</label>
+          <input type="radio" name="when" id="w4" value="아직 미정"><label for="w4">아직 미정</label>
+        </div>
+      </div>
+      <div class="f">
+        <span class="lab">폐업 예정이신가요</span>
+        <div class="chips">
+          <input type="radio" name="close" id="c1" value="폐업 예정"><label for="c1">네, 폐업 예정</label>
+          <input type="radio" name="close" id="c2" value="폐업 아님"><label for="c2">아니요</label>
+        </div>
+      </div>
+      <div class="f">
+        <label for="memo">하실 말씀 <small>(선택)</small></label>
+        <textarea id="memo" placeholder="예: 3층, 엘리베이터 없음 / 주말 작업 원함"></textarea>
+      </div>
+      <button class="go" type="submit">문자 열고 사진 보내기<small>다음 화면에서 사진 3~5장만 첨부해 주세요</small></button>
+      <p class="note">문자 창이 안 열리면 아래 내용을 복사해서 <b>010-2768-9135</b>로 사진과 함께 보내주세요.</p>
+      <div class="preview" id="pv"></div>
+      <button class="copy" type="button" id="cp" style="display:none" onclick="copyMsg()">내용 복사</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>이렇게 찍어주시면 정확합니다</h2>
+    <div class="tips">
+      <div class="tip"><strong>① 입구에서 전체</strong><span>문 앞에서 안쪽이 다 보이게 1장</span></div>
+      <div class="tip"><strong>② 천장</strong><span>위를 보고 1장 (텍스·석고 구분용)</span></div>
+      <div class="tip"><strong>③ 바닥·벽</strong><span>타일·가벽이 보이게 1장</span></div>
+      <div class="tip"><strong>④ 뜯을 설비</strong><span>주방·욕실·간판 등 가까이서</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>바른철거는</h2>
+    <div class="why">
+      <div><strong>항목별 단가를 공개합니다</strong><span>"철거 일체 얼마" 한 줄이 아니라, 천장·벽·폐기물을 따로 적어드립니다.</span></div>
+      <div><strong>가게를 직접 닫아본 사람이 봅니다</strong><span>장사를 오래 해봤기 때문에, 폐업 날 무엇이 급한지 압니다.</span></div>
+      <div><strong>세금계산서 발행</strong><span>사업자 등록 업체입니다. 전자세금계산서 발행합니다.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="box">
+      <strong>폐업 예정이시라면 먼저 확인하세요</strong>
+      철거비 지원 대상인지 무료로 확인해 드립니다. 철거 <b>전</b> 사진이 꼭 필요하니, 뜯기 전에 연락 주세요.<br>
+      제도 문의: 소상공인 콜센터 <a href="tel:15330100"><b>1533-0100</b></a> · 신청은 사업자 본인이 합니다.
+    </div>
+  </section>
+
+  <section>
+    <h2>작업 지역</h2>
+    <p class="area"><b>하남</b> 미사·위례·감일·덕풍·신장 · <b>강동</b> 고덕·명일·상일·둔촌·천호·암사·성내 · <b>송파</b> 문정·가락·방이·잠실·거여·마천 · <b>경기광주</b> 경안·태전·오포·곤지암·초월</p>
+    <p class="note">보내주신 사진은 견적에만 쓰고, 허락 없이 어디에도 올리지 않습니다. 금액은 공급가액, 부가세 별도입니다.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>바른철거</b> · 대표 이승훈<br>
+    전화 <a href="tel:01027689135">010-2768-9135</a><br>
+    경기 하남시 신장로 111, 601호
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="b1" href="tel:01027689135">전화</a>
+  <a class="b2" href="#quote">사진 견적</a>
+</div>
+
+<script>
+var PHONE='01027689135';
+function val(n){var e=document.querySelector('input[name="'+n+'"]:checked');return e?e.value:'';}
+function build(){
+  var jobs=[].slice.call(document.querySelectorAll('input[name="job"]:checked')).map(function(e){return e.value}).join(', ');
+  var py=document.getElementById('py').value.trim();
+  var memo=document.getElementById('memo').value.trim();
+  var L=['[바른철거 사진 견적 요청]'];
+  if(val('area'))L.push('지역: '+val('area'));
+  if(val('space'))L.push('공간: '+val('space'));
+  if(py)L.push('평수: 약 '+py+'평');
+  if(jobs)L.push('작업: '+jobs);
+  if(val('when'))L.push('시기: '+val('when'));
+  if(val('close'))L.push('폐업: '+val('close'));
+  if(memo)L.push('메모: '+memo);
+  L.push('(사진 첨부합니다)');
+  return L.join('\n');
+}
+function go(ev){
+  ev.preventDefault();
+  var msg=build();
+  var pv=document.getElementById('pv');pv.textContent=msg;pv.classList.add('on');
+  document.getElementById('cp').style.display='inline-block';
+  var ios=/iPhone|iPad|iPod/i.test(navigator.userAgent);
+  var url='sms:'+PHONE+(ios?'&':'?')+'body='+encodeURIComponent(msg);
+  window.location.href=url;
+  return false;
+}
+function copyMsg(){
+  var t=build();
+  if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){document.getElementById('cp').textContent='복사됨';});}
+}
+</script>
+</body>
+</html>
