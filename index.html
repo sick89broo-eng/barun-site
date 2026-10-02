@@ -3,249 +3,336 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>바른철거 | 사진으로 철거 견적 — 하남·강동·송파·경기광주</title>
-<meta name="description" content="현장 사진 3장을 문자로 보내주시면 철거 견적을 먼저 알려드립니다. 상가·식당·사무실·아파트 철거, 원상복구. 항목별 단가 공개.">
+<title>바른철거 | 상가·식당·사무실 철거, 원상복구 — 하남·강동·송파·경기광주</title>
+<meta name="description" content="현장 사진 3장이면 철거 견적을 먼저 드립니다. 상가·식당·사무실·아파트 철거와 원상복구, 폐기물 반출까지. 항목별 단가 공개.">
 <meta property="og:title" content="바른철거 — 사진 3장이면 철거 견적 먼저">
-<meta property="og:description" content="방문 전에 문자로 사진만 보내주세요. 항목별로 적어서 알려드립니다.">
-<meta name="theme-color" content="#1b3a5c">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+<meta property="og:description" content="방문 전에 사진으로 먼저. 항목별로 적어서 알려드립니다.">
+<meta property="og:image" content="img/hero.jpg">
+<meta name="theme-color" content="#14233c">
+<link rel="preload" as="image" href="img/hero.jpg">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
-:root{--navy:#1b3a5c;--navy2:#13293f;--gold:#f5c93b;--ink:#15202b;--sub:#4a5866;--line:#dfe4ea;--bg:#f6f7f9;--card:#fff}
+:root{--navy:#14233c;--navy2:#0d1829;--gold:#d9ad4f;--gold2:#f0c968;--ink:#16202c;--sub:#5a6675;--line:#e3e7ec;--bg:#f5f6f8;--card:#fff}
 *{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%}
-body{font-family:"Noto Sans KR",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;padding-bottom:84px;word-break:keep-all}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{font-family:Pretendard,"Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;padding-bottom:86px;word-break:keep-all}
 a{color:inherit}
-.wrap{max-width:640px;margin:0 auto;padding:0 18px}
-header{background:var(--navy);color:#fff}
-.top{display:flex;align-items:center;justify-content:space-between;height:60px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:19px;text-decoration:none}
-.badge{width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-weight:900;font-size:14px}
-.top a.call{background:var(--gold);color:var(--navy);font-weight:900;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:15px}
-.hero{background:var(--navy);color:#fff;padding:26px 0 34px}
-.hero .tag{display:inline-block;background:rgba(245,201,59,.16);color:var(--gold);font-weight:700;font-size:14px;padding:4px 10px;border-radius:6px;margin-bottom:12px}
-.hero h1{font-size:31px;line-height:1.3;font-weight:900;letter-spacing:-.5px}
-.hero h1 em{font-style:normal;color:var(--gold)}
-.hero p{margin-top:12px;font-size:17px;color:#dbe4ee}
-.hero .cta{display:block;margin-top:22px;background:var(--gold);color:var(--navy);text-align:center;font-weight:900;font-size:19px;padding:17px;border-radius:12px;text-decoration:none}
-section{padding:30px 0 6px}
-h2{font-size:22px;font-weight:900;margin-bottom:14px;letter-spacing:-.3px}
-.steps{display:grid;gap:10px}
-.step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 16px;display:flex;gap:14px;align-items:flex-start}
-.step b.n{flex:none;width:32px;height:32px;border-radius:50%;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-weight:900}
+img{display:block;max-width:100%}
+.wrap{max-width:680px;margin:0 auto;padding:0 18px}
+/* header */
+.top{position:absolute;top:0;left:0;right:0;z-index:5}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:18px;color:#fff;text-decoration:none}
+.badge{width:32px;height:32px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-weight:900;font-size:13px}
+.top a.tel{color:#fff;font-weight:700;font-size:15px;text-decoration:none;border:1.5px solid rgba(255,255,255,.6);padding:6px 12px;border-radius:999px}
+/* hero */
+.hero{position:relative;min-height:560px;color:#fff;display:flex;align-items:flex-end;background:var(--navy2) url(img/hero.jpg) center/cover no-repeat}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,24,41,.55) 0%,rgba(13,24,41,.55) 40%,rgba(13,24,41,.96) 85%)}
+.hero .wrap{position:relative;padding-top:90px;padding-bottom:30px;width:100%}
+.chip{display:inline-block;background:rgba(217,173,79,.18);color:var(--gold2);font-weight:700;font-size:13px;padding:5px 10px;border-radius:6px;margin-bottom:14px}
+.hero h1{font-size:34px;line-height:1.28;font-weight:800;letter-spacing:-.8px}
+.hero h1 em{font-style:normal;color:var(--gold2)}
+.hero p.lead{margin-top:12px;font-size:17px;color:#d7dfe9}
+.btns{display:grid;grid-template-columns:1.4fr 1fr;gap:10px;margin-top:22px}
+.btn{display:flex;align-items:center;justify-content:center;gap:6px;font-weight:800;font-size:17px;padding:16px 10px;border-radius:12px;text-decoration:none;border:0;cursor:pointer;font-family:inherit}
+.btn.gold{background:var(--gold);color:var(--navy)}
+.btn.ghost{background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+.btn.navy{background:var(--navy);color:#fff}
+.hero small{display:block;margin-top:12px;color:#aab6c4;font-size:13px}
+/* trust strip */
+.trust{background:#fff;border-bottom:1px solid var(--line)}
+.trust .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding-top:16px;padding-bottom:16px}
+.trust div{text-align:center;font-size:13px;color:var(--sub);line-height:1.35}
+.trust b{display:block;color:var(--navy);font-size:15px;margin-bottom:2px}
+/* sections */
+section{padding:38px 0 8px}
+.kicker{color:#b08a35;font-weight:800;font-size:13px;letter-spacing:.5px;margin-bottom:6px}
+h2{font-size:24px;font-weight:800;letter-spacing:-.5px;line-height:1.35;margin-bottom:14px}
+p.desc{color:var(--sub);font-size:15px;margin:-6px 0 16px}
+/* gallery */
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gal figure{position:relative;border-radius:12px;overflow:hidden;background:#ddd;aspect-ratio:4/5}
+.gal img{width:100%;height:100%;object-fit:cover}
+.gal figcaption{position:absolute;left:8px;bottom:8px;right:8px;font-size:12px;font-weight:700;color:#fff;background:rgba(13,24,41,.78);padding:5px 8px;border-radius:7px}
+.gal figcaption span{color:var(--gold2)}
+.gal figure.wide{grid-column:span 2;aspect-ratio:16/10}
+.note{font-size:13px;color:var(--sub);margin-top:10px}
+/* steps */
+.steps{counter-reset:s;display:grid;gap:10px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;gap:14px}
+.step:before{counter-increment:s;content:counter(s);flex:none;width:34px;height:34px;border-radius:50%;background:var(--navy);color:var(--gold2);display:grid;place-items:center;font-weight:800}
 .step strong{display:block;font-size:17px}
 .step span{color:var(--sub);font-size:15px}
-form{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
-.f{margin-bottom:18px}
-.f>label,.f>.lab{display:block;font-weight:700;font-size:16px;margin-bottom:8px}
-.f small{color:var(--sub);font-weight:400}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
+/* scope */
+.scope{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.scope div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.scope strong{display:block;font-size:16px}
+.scope span{font-size:13px;color:var(--sub)}
+/* price */
+.price{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.price table{width:100%;border-collapse:collapse;font-size:15px}
+.price td{padding:12px 14px;border-bottom:1px solid var(--line)}
+.price td:last-child{text-align:right;font-weight:700;white-space:nowrap}
+.price tr:last-child td{border-bottom:0}
+.price .cap{background:#f8f4ea;font-size:13px;color:#6d5a2c;padding:10px 14px}
+.factors{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.factors span{background:#eef1f5;border-radius:999px;padding:6px 11px;font-size:13px;color:var(--navy)}
+/* promise */
+.prom{display:grid;gap:10px}
+.prom div{background:var(--card);border-left:4px solid var(--gold);border-radius:10px;padding:14px 16px}
+.prom strong{display:block;font-size:16px}
+.prom span{font-size:14px;color:var(--sub)}
+/* form */
+.formbox{background:var(--navy);border-radius:18px;padding:22px 18px;color:#fff}
+.formbox h2{color:#fff}
+.formbox p.desc{color:#b9c5d3}
+.f{margin-bottom:16px}
+.lab{display:block;font-weight:700;font-size:15px;margin-bottom:8px}
+.lab small{color:#9fb0c3;font-weight:400}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
 .chips input{position:absolute;opacity:0;pointer-events:none}
-.chips label{border:1.5px solid var(--line);border-radius:999px;padding:9px 14px;font-size:15px;cursor:pointer;background:#fff;user-select:none}
-.chips input:checked+label{border-color:var(--navy);background:var(--navy);color:#fff;font-weight:700}
-.chips input:focus-visible+label{outline:3px solid var(--gold)}
-input[type=number],input[type=text],textarea{width:100%;font:inherit;font-size:16px;border:1.5px solid var(--line);border-radius:10px;padding:12px;background:#fff}
-textarea{min-height:76px;resize:vertical}
-.go{width:100%;border:0;background:var(--navy);color:#fff;font:inherit;font-weight:900;font-size:19px;padding:17px;border-radius:12px;cursor:pointer}
-.go small{display:block;font-weight:400;font-size:13px;color:var(--gold);margin-top:2px}
-.note{font-size:14px;color:var(--sub);margin-top:12px}
-.preview{display:none;margin-top:14px;background:#f1f4f8;border-radius:10px;padding:12px;font-size:14px;white-space:pre-wrap}
+.chips label{border:1.5px solid rgba(255,255,255,.28);border-radius:999px;padding:9px 13px;font-size:15px;cursor:pointer;user-select:none;color:#e6ecf3}
+.chips input:checked+label{border-color:var(--gold);background:var(--gold);color:var(--navy);font-weight:800}
+.chips input:focus-visible+label{outline:3px solid var(--gold2)}
+.formbox input[type=number],.formbox textarea{width:100%;font:inherit;font-size:16px;border:1.5px solid rgba(255,255,255,.28);border-radius:10px;padding:12px;background:rgba(255,255,255,.06);color:#fff}
+.formbox textarea{min-height:70px;resize:vertical}
+.formbox ::placeholder{color:#8797aa}
+.go{width:100%;margin-top:4px;flex-direction:column}
+.go small{display:block;font-weight:500;font-size:12px;margin-top:2px}
+.fallback{font-size:13px;color:#b9c5d3;margin-top:12px}
+.preview{display:none;margin-top:10px;background:rgba(255,255,255,.08);border-radius:10px;padding:12px;font-size:14px;white-space:pre-wrap}
 .preview.on{display:block}
-.copy{margin-top:8px;border:1.5px solid var(--navy);background:#fff;color:var(--navy);font:inherit;font-weight:700;padding:9px 14px;border-radius:8px;cursor:pointer}
-.tips{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.tip{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
-.tip strong{display:block;font-size:16px}
-.tip span{font-size:14px;color:var(--sub)}
-.why{display:grid;gap:10px}
-.why div{background:var(--card);border-left:4px solid var(--gold);border-radius:8px;padding:13px 15px}
-.why strong{display:block}
-.why span{font-size:15px;color:var(--sub)}
-.box{background:#fff8de;border:1px solid #f0dc91;border-radius:12px;padding:16px;font-size:15px}
-.box strong{display:block;font-size:17px;margin-bottom:4px}
+.copy{margin-top:8px;border:1.5px solid var(--gold);background:transparent;color:var(--gold2);font:inherit;font-weight:700;padding:8px 14px;border-radius:8px;cursor:pointer;display:none}
+/* faq */
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:8px;padding:0 16px}
+summary{cursor:pointer;font-weight:700;font-size:16px;padding:15px 0;list-style:none;position:relative;padding-right:24px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";position:absolute;right:0;top:12px;font-size:22px;color:var(--gold)}
+details[open] summary:after{content:"−"}
+details p{padding:0 0 15px;color:var(--sub);font-size:15px}
+.gov{background:#fff8e6;border:1px solid #efd99a;border-radius:14px;padding:16px;font-size:15px}
+.gov strong{display:block;font-size:17px;margin-bottom:4px}
 .area{font-size:15px;color:var(--sub)}
 .area b{color:var(--ink)}
-footer{margin-top:34px;background:var(--navy2);color:#b9c6d3;font-size:14px;padding:22px 0}
+footer{margin-top:40px;background:var(--navy2);color:#9fb0c3;font-size:13px;padding:24px 0;line-height:1.8}
 footer b{color:#fff}
-.bar{position:fixed;left:0;right:0;bottom:0;display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid var(--line);z-index:9}
-.bar a{flex:1;text-align:center;font-weight:900;font-size:17px;padding:14px 0;border-radius:10px;text-decoration:none}
-.bar .b1{background:#fff;border:2px solid var(--navy);color:var(--navy)}
-.bar .b2{background:var(--navy);color:#fff}
-@media (min-width:600px){.hero h1{font-size:38px}}
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1.5fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid var(--line);z-index:9;box-shadow:0 -4px 16px rgba(0,0,0,.06)}
+.bar a{display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;padding:14px 0;border-radius:11px;text-decoration:none}
+.bar .b1{border:2px solid var(--navy);color:var(--navy)}
+.bar .b2{background:var(--gold);color:var(--navy)}
+@media (min-width:640px){.hero h1{font-size:44px}.hero{min-height:620px}.gal{grid-template-columns:repeat(3,1fr)}.gal figure.wide{grid-column:span 3;aspect-ratio:21/9}}
 </style>
 </head>
 <body>
-<header>
-  <div class="wrap top">
-    <a class="brand" href="#"><span class="badge">BR</span>바른철거</a>
-    <a class="call" href="tel:01027689135">전화하기</a>
-  </div>
-</header>
 
-<div class="hero">
-  <div class="wrap">
-    <span class="tag">하남 · 강동 · 송파 · 경기광주</span>
-    <h1>사진 3장이면<br><em>철거 견적</em> 먼저 드립니다</h1>
-    <p>방문 약속 잡기 전에, 문자로 현장 사진만 보내주세요.<br>어디를 얼마에 뜯는지 항목별로 적어서 알려드립니다.</p>
-    <a class="cta" href="#quote">사진으로 견적 받기</a>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#"><span class="badge">BR</span>바른철거</a>
+  <a class="tel" href="tel:01027689135" onclick="trackLead('call_top')">010-2768-9135</a>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <span class="chip">하남 · 강동 · 송파 · 경기광주</span>
+  <h1>사진 3장이면,<br><em>철거 견적</em> 먼저 드립니다</h1>
+  <p class="lead">상가·식당·사무실·아파트 철거부터 원상복구, 폐기물 반출까지.<br>어디를 얼마에 뜯는지 항목별로 적어 드립니다.</p>
+  <div class="btns">
+    <a class="btn gold" href="#quote">사진으로 견적받기</a>
+    <a class="btn ghost" href="tel:01027689135" onclick="trackLead('call_hero')">바로 전화</a>
   </div>
-</div>
+  <small>전화가 부담스러우시면 사진만 보내주세요. 견적 보고 결정하셔도 됩니다.</small>
+</div></div>
+
+<div class="trust"><div class="wrap">
+  <div><b>항목별 견적서</b>천장·벽·폐기물 따로</div>
+  <div><b>단가 공개</b>아래 표 그대로</div>
+  <div><b>사업자 등록</b>전자세금계산서</div>
+</div></div>
 
 <main class="wrap">
-  <section>
-    <h2>이렇게 진행됩니다</h2>
-    <div class="steps">
-      <div class="step"><b class="n">1</b><div><strong>아래 칸을 골라주세요</strong><span>지역·공간·평수 정도면 충분합니다. 30초면 끝납니다.</span></div></div>
-      <div class="step"><b class="n">2</b><div><strong>문자 창에 사진을 붙여 보내주세요</strong><span>버튼을 누르면 내용이 채워진 문자 창이 열립니다. 사진만 첨부하시면 됩니다.</span></div></div>
-      <div class="step"><b class="n">3</b><div><strong>항목별 예상 금액을 받습니다</strong><span>사진으로 판단이 어려운 부분만 방문해서 확인합니다.</span></div></div>
-    </div>
-  </section>
 
-  <section id="quote">
-    <h2>견적 요청</h2>
+<section>
+  <div class="kicker">REAL SITE</div>
+  <h2>저희가 직접 작업한 현장입니다</h2>
+  <p class="desc">인터넷 이미지가 아닌, 바른철거 팀이 찍은 실제 사진입니다.</p>
+  <div class="gal">
+    <figure class="wide"><img src="img/f2.jpg" alt="지하 상가 천장·벽체 철거 작업 중" loading="lazy"><figcaption><span>철거 중</span> · 지하 상가 천장·벽체 철거</figcaption></figure>
+    <figure><img src="img/e1.jpg" alt="사무실 원상복구 완료" loading="lazy"><figcaption><span>완료</span> · 사무실 원상복구</figcaption></figure>
+    <figure><img src="img/e2.jpg" alt="상가 내부 정리 완료" loading="lazy"><figcaption><span>완료</span> · 상가 내부 철거·정리</figcaption></figure>
+    <figure><img src="img/f3.jpg" alt="폐기물 마대 반출 대기" loading="lazy"><figcaption><span>반출</span> · 폐기물 마대 정리</figcaption></figure>
+    <figure><img src="img/g1.jpg" alt="아파트 베란다 바닥 타일 철거" loading="lazy"><figcaption><span>철거 후</span> · 아파트 베란다 바닥</figcaption></figure>
+    <figure><img src="img/k1.jpg" alt="식당 주방 철거 전 현장 확인" loading="lazy"><figcaption><span>현장 확인</span> · 식당 주방 철거 전</figcaption></figure>
+    <figure><img src="img/g2.jpg" alt="베란다 바닥 철거 후 정리" loading="lazy"><figcaption><span>정리</span> · 베란다 철거 후</figcaption></figure>
+  </div>
+  <p class="note">고객 동의 없이 상호·얼굴·차량번호가 보이는 사진은 올리지 않습니다.</p>
+</section>
+
+<section>
+  <div class="kicker">HOW IT WORKS</div>
+  <h2>이렇게 진행됩니다</h2>
+  <div class="steps">
+    <div class="step"><div><strong>사진 보내기</strong><span>입구 전체·천장·바닥 3장이면 충분합니다.</span></div></div>
+    <div class="step"><div><strong>대략 견적 받기</strong><span>사진으로 판단되는 범위까지 항목별 예상 금액을 드립니다.</span></div></div>
+    <div class="step"><div><strong>현장 확인 · 확정 견적</strong><span>사진으로 안 보이는 부분만 방문해서 확인합니다.</span></div></div>
+    <div class="step"><div><strong>철거 · 폐기물 반출 · 정리</strong><span>약속한 날짜에 철거하고, 폐기물까지 실어 나갑니다.</span></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">WHAT WE DO</div>
+  <h2>이런 작업을 합니다</h2>
+  <div class="scope">
+    <div><strong>상가·매장</strong><span>폐업·이전 전체 철거</span></div>
+    <div><strong>식당</strong><span>주방·후드·덕트·집기</span></div>
+    <div><strong>사무실</strong><span>가벽·천장·바닥재</span></div>
+    <div><strong>아파트·주택</strong><span>욕실·주방·베란다</span></div>
+    <div><strong>원상복구</strong><span>임대차 만료 전 복구</span></div>
+    <div><strong>폐기물만</strong><span>마대·집기 반출</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">PRICE</div>
+  <h2>단가를 공개합니다</h2>
+  <p class="desc">다른 곳은 잘 안 알려주는 기준 단가입니다. 실제 금액은 현장 조건에 따라 달라집니다.</p>
+  <div class="price">
+    <table>
+      <tr><td>천장 철거 (1겹)</td><td>평당 3만원</td></tr>
+      <tr><td>가벽 철거 (석고+스터드)</td><td>30cm당 2만원</td></tr>
+      <tr><td>욕실 기본 철거</td><td>1칸 10만원</td></tr>
+      <tr><td>폐기물 반출 (1톤 차량 1대)</td><td>35만원</td></tr>
+      <tr><td>계단 양중 (2층 기준)</td><td>2만원</td></tr>
+    </table>
+    <div class="cap">공급가액 기준, 부가세 별도 · 1평 = 1.8m×1.8m</div>
+  </div>
+  <div class="factors">
+    <span>평수</span><span>층수·엘리베이터</span><span>천장 겹수</span><span>폐기물 양</span><span>주차·반출 동선</span><span>작업 시간대</span>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">PROMISE</div>
+  <h2>바른철거가 지키는 것</h2>
+  <div class="prom">
+    <div><strong>추가 비용은 미리 말씀드립니다</strong><span>철거 중 추가가 생길 수 있는 경우를 견적 단계에서 먼저 안내합니다.</span></div>
+    <div><strong>가게를 직접 닫아본 사람이 봅니다</strong><span>장사를 오래 해봤기에, 폐업 날 무엇이 급한지 압니다.</span></div>
+    <div><strong>사진 기록을 남깁니다</strong><span>철거 전·중·후 사진을 정리해 드립니다. 지원 제도 신청에도 쓰실 수 있습니다.</span></div>
+  </div>
+</section>
+
+<section id="quote">
+  <div class="formbox">
+    <div class="kicker" style="color:var(--gold2)">PHOTO QUOTE</div>
+    <h2>사진으로 견적 요청</h2>
+    <p class="desc">고르고 버튼만 누르시면 내용이 채워진 문자창이 열립니다. 사진만 붙여 보내주세요.</p>
     <form id="qf" onsubmit="return go(event)">
-      <div class="f">
-        <span class="lab">지역</span>
-        <div class="chips" data-name="지역">
-          <input type="radio" name="area" id="a1" value="하남"><label for="a1">하남</label>
-          <input type="radio" name="area" id="a2" value="강동"><label for="a2">강동</label>
-          <input type="radio" name="area" id="a3" value="송파"><label for="a3">송파</label>
-          <input type="radio" name="area" id="a4" value="경기광주"><label for="a4">경기광주</label>
-          <input type="radio" name="area" id="a5" value="그 외"><label for="a5">그 외</label>
-        </div>
-      </div>
-      <div class="f">
-        <span class="lab">어떤 공간인가요</span>
-        <div class="chips">
-          <input type="radio" name="space" id="s1" value="식당·카페"><label for="s1">식당·카페</label>
-          <input type="radio" name="space" id="s2" value="상가·매장"><label for="s2">상가·매장</label>
-          <input type="radio" name="space" id="s3" value="사무실"><label for="s3">사무실</label>
-          <input type="radio" name="space" id="s4" value="아파트·주택"><label for="s4">아파트·주택</label>
-          <input type="radio" name="space" id="s5" value="기타"><label for="s5">기타</label>
-        </div>
-      </div>
-      <div class="f">
-        <label for="py">대략 평수 <small>(모르시면 비워두세요)</small></label>
-        <input type="number" id="py" inputmode="numeric" min="1" max="999" placeholder="예: 25">
-      </div>
-      <div class="f">
-        <span class="lab">필요한 작업 <small>(여러 개 선택)</small></span>
-        <div class="chips">
-          <input type="checkbox" name="job" id="j1" value="전체 철거"><label for="j1">전체 철거</label>
-          <input type="checkbox" name="job" id="j2" value="원상복구"><label for="j2">원상복구</label>
-          <input type="checkbox" name="job" id="j3" value="천장"><label for="j3">천장</label>
-          <input type="checkbox" name="job" id="j4" value="벽·가벽"><label for="j4">벽·가벽</label>
-          <input type="checkbox" name="job" id="j5" value="주방"><label for="j5">주방</label>
-          <input type="checkbox" name="job" id="j6" value="욕실"><label for="j6">욕실</label>
-          <input type="checkbox" name="job" id="j7" value="간판"><label for="j7">간판</label>
-          <input type="checkbox" name="job" id="j8" value="폐기물만"><label for="j8">폐기물만</label>
-        </div>
-      </div>
-      <div class="f">
-        <span class="lab">언제까지 끝나야 하나요</span>
-        <div class="chips">
-          <input type="radio" name="when" id="w1" value="이번 주"><label for="w1">이번 주</label>
-          <input type="radio" name="when" id="w2" value="2주 안"><label for="w2">2주 안</label>
-          <input type="radio" name="when" id="w3" value="한 달 안"><label for="w3">한 달 안</label>
-          <input type="radio" name="when" id="w4" value="아직 미정"><label for="w4">아직 미정</label>
-        </div>
-      </div>
-      <div class="f">
-        <span class="lab">폐업 예정이신가요</span>
-        <div class="chips">
-          <input type="radio" name="close" id="c1" value="폐업 예정"><label for="c1">네, 폐업 예정</label>
-          <input type="radio" name="close" id="c2" value="폐업 아님"><label for="c2">아니요</label>
-        </div>
-      </div>
-      <div class="f">
-        <label for="memo">하실 말씀 <small>(선택)</small></label>
-        <textarea id="memo" placeholder="예: 3층, 엘리베이터 없음 / 주말 작업 원함"></textarea>
-      </div>
-      <button class="go" type="submit">문자 열고 사진 보내기<small>다음 화면에서 사진 3~5장만 첨부해 주세요</small></button>
-      <p class="note">문자 창이 안 열리면 아래 내용을 복사해서 <b>010-2768-9135</b>로 사진과 함께 보내주세요.</p>
+      <div class="f"><span class="lab">지역</span><div class="chips">
+        <input type="radio" name="area" id="a1" value="하남"><label for="a1">하남</label>
+        <input type="radio" name="area" id="a2" value="강동"><label for="a2">강동</label>
+        <input type="radio" name="area" id="a3" value="송파"><label for="a3">송파</label>
+        <input type="radio" name="area" id="a4" value="경기광주"><label for="a4">경기광주</label>
+        <input type="radio" name="area" id="a5" value="그 외"><label for="a5">그 외</label>
+      </div></div>
+      <div class="f"><span class="lab">공간</span><div class="chips">
+        <input type="radio" name="space" id="s1" value="식당·카페"><label for="s1">식당·카페</label>
+        <input type="radio" name="space" id="s2" value="상가·매장"><label for="s2">상가·매장</label>
+        <input type="radio" name="space" id="s3" value="사무실"><label for="s3">사무실</label>
+        <input type="radio" name="space" id="s4" value="아파트·주택"><label for="s4">아파트·주택</label>
+      </div></div>
+      <div class="f"><label class="lab" for="py">대략 평수 <small>(모르시면 비워두세요)</small></label>
+        <input type="number" id="py" inputmode="numeric" min="1" max="999" placeholder="예: 25"></div>
+      <div class="f"><span class="lab">필요한 작업 <small>(여러 개)</small></span><div class="chips">
+        <input type="checkbox" name="job" id="j1" value="전체 철거"><label for="j1">전체 철거</label>
+        <input type="checkbox" name="job" id="j2" value="원상복구"><label for="j2">원상복구</label>
+        <input type="checkbox" name="job" id="j3" value="주방"><label for="j3">주방</label>
+        <input type="checkbox" name="job" id="j4" value="욕실"><label for="j4">욕실</label>
+        <input type="checkbox" name="job" id="j5" value="간판"><label for="j5">간판</label>
+        <input type="checkbox" name="job" id="j6" value="폐기물만"><label for="j6">폐기물만</label>
+      </div></div>
+      <div class="f"><span class="lab">언제까지</span><div class="chips">
+        <input type="radio" name="when" id="w1" value="이번 주"><label for="w1">이번 주</label>
+        <input type="radio" name="when" id="w2" value="2주 안"><label for="w2">2주 안</label>
+        <input type="radio" name="when" id="w3" value="한 달 안"><label for="w3">한 달 안</label>
+        <input type="radio" name="when" id="w4" value="미정"><label for="w4">미정</label>
+      </div></div>
+      <div class="f"><label class="lab" for="memo">하실 말씀 <small>(선택)</small></label>
+        <textarea id="memo" placeholder="예: 3층, 엘리베이터 없음 / 폐업 예정"></textarea></div>
+      <button class="btn gold go" type="submit">문자로 사진 보내기<small>다음 화면에서 사진 3~5장 첨부</small></button>
+      <p class="fallback">문자창이 안 열리면 아래 내용을 복사해 <b>010-2768-9135</b>로 사진과 함께 보내주세요.</p>
       <div class="preview" id="pv"></div>
-      <button class="copy" type="button" id="cp" style="display:none" onclick="copyMsg()">내용 복사</button>
+      <button class="copy" type="button" id="cp" onclick="copyMsg()">내용 복사</button>
     </form>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <h2>이렇게 찍어주시면 정확합니다</h2>
-    <div class="tips">
-      <div class="tip"><strong>① 입구에서 전체</strong><span>문 앞에서 안쪽이 다 보이게 1장</span></div>
-      <div class="tip"><strong>② 천장</strong><span>위를 보고 1장 (텍스·석고 구분용)</span></div>
-      <div class="tip"><strong>③ 바닥·벽</strong><span>타일·가벽이 보이게 1장</span></div>
-      <div class="tip"><strong>④ 뜯을 설비</strong><span>주방·욕실·간판 등 가까이서</span></div>
-    </div>
-  </section>
+<section>
+  <div class="kicker">FAQ</div>
+  <h2>자주 묻는 질문</h2>
+  <details><summary>사진만으로 정확한 금액이 나오나요?</summary><p>사진으로 보이는 범위는 항목별 예상 금액을 드리고, 천장 속·바닥 아래처럼 안 보이는 부분은 현장 확인 후 확정합니다.</p></details>
+  <details><summary>추가 비용이 생기는 경우가 있나요?</summary><p>철거하다 숨은 구조물이 나오거나 폐기물이 예상보다 많은 경우입니다. 이런 가능성은 견적 단계에서 미리 말씀드리고, 생기면 작업 전에 먼저 상의합니다.</p></details>
+  <details><summary>주말이나 야간에도 작업하나요?</summary><p>건물 관리 규정이 허락하면 가능합니다. 관리사무소 규정을 함께 확인해 일정을 잡습니다.</p></details>
+  <details><summary>원상복구는 어디까지 해야 하나요?</summary><p>임대차계약서 문구와 입주 당시 상태에 따라 다릅니다. 계약서 해당 부분을 사진으로 보내주시면 범위를 같이 정리해 드립니다.</p></details>
+  <details><summary>폐기물은 어떻게 처리하나요?</summary><p>철거하면서 나온 폐기물은 마대에 담아 차량으로 반출합니다. 차량 대수 기준으로 비용을 안내합니다.</p></details>
+</section>
 
-  <section>
-    <h2>바른철거는</h2>
-    <div class="why">
-      <div><strong>항목별 단가를 공개합니다</strong><span>"철거 일체 얼마" 한 줄이 아니라, 천장·벽·폐기물을 따로 적어드립니다.</span></div>
-      <div><strong>가게를 직접 닫아본 사람이 봅니다</strong><span>장사를 오래 해봤기 때문에, 폐업 날 무엇이 급한지 압니다.</span></div>
-      <div><strong>세금계산서 발행</strong><span>사업자 등록 업체입니다. 전자세금계산서 발행합니다.</span></div>
-    </div>
-  </section>
+<section>
+  <div class="gov">
+    <strong>폐업 예정이시라면 먼저 확인하세요</strong>
+    철거비 지원 제도 대상인지 무료로 확인해 드립니다. 철거 <b>전</b> 사진이 꼭 필요하니, 뜯기 전에 연락 주세요.<br>
+    제도 문의: 소상공인 콜센터 <a href="tel:15330100"><b>1533-0100</b></a> · 신청은 사업자 본인이 하십니다.
+  </div>
+</section>
 
-  <section>
-    <div class="box">
-      <strong>폐업 예정이시라면 먼저 확인하세요</strong>
-      철거비 지원 대상인지 무료로 확인해 드립니다. 철거 <b>전</b> 사진이 꼭 필요하니, 뜯기 전에 연락 주세요.<br>
-      제도 문의: 소상공인 콜센터 <a href="tel:15330100"><b>1533-0100</b></a> · 신청은 사업자 본인이 합니다.
-    </div>
-  </section>
-
-  <section>
-    <h2>작업 지역</h2>
-    <p class="area"><b>하남</b> 미사·위례·감일·덕풍·신장 · <b>강동</b> 고덕·명일·상일·둔촌·천호·암사·성내 · <b>송파</b> 문정·가락·방이·잠실·거여·마천 · <b>경기광주</b> 경안·태전·오포·곤지암·초월</p>
-    <p class="note">보내주신 사진은 견적에만 쓰고, 허락 없이 어디에도 올리지 않습니다. 금액은 공급가액, 부가세 별도입니다.</p>
-  </section>
+<section>
+  <div class="kicker">AREA</div>
+  <h2>작업 지역</h2>
+  <p class="area"><b>하남</b> 미사·위례·감일·덕풍·신장<br><b>강동</b> 고덕·명일·상일·둔촌·천호·암사·성내<br><b>송파</b> 문정·가락·방이·잠실·거여·마천<br><b>경기광주</b> 경안·태전·오포·곤지암·초월</p>
+  <p class="note">보내주신 사진은 견적에만 쓰고, 허락 없이 어디에도 올리지 않습니다.</p>
+</section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <b>바른철거</b> · 대표 이승훈<br>
-    전화 <a href="tel:01027689135">010-2768-9135</a><br>
-    경기 하남시 신장로 111, 601호
-  </div>
-</footer>
+<footer><div class="wrap">
+  <b>바른철거</b> · 대표 이승훈<br>
+  전화 <a href="tel:01027689135" onclick="trackLead('call_footer')">010-2768-9135</a><br>
+  경기 하남시 신장로 111, 601호<br>
+  전자세금계산서 발행
+</div></footer>
 
 <div class="bar">
-  <a class="b1" href="tel:01027689135">전화</a>
-  <a class="b2" href="#quote">사진 견적</a>
+  <a class="b1" href="tel:01027689135" onclick="trackLead('call_bar')">전화</a>
+  <a class="b2" href="#quote">사진으로 견적받기</a>
 </div>
 
 <script>
+/* 네이버 광고 전환 추적 — 사장님 광고계정 키(wa) 받으면 WCS_KEY 에 넣고 주석 해제 */
+var WCS_KEY='';
+function trackLead(label){
+  try{ if(WCS_KEY && window.wcs){ var _conv={type:'lead'}; wcs.trans(_conv); } }catch(e){}
+}
 var PHONE='01027689135';
 function val(n){var e=document.querySelector('input[name="'+n+'"]:checked');return e?e.value:'';}
 function build(){
   var jobs=[].slice.call(document.querySelectorAll('input[name="job"]:checked')).map(function(e){return e.value}).join(', ');
-  var py=document.getElementById('py').value.trim();
-  var memo=document.getElementById('memo').value.trim();
+  var py=document.getElementById('py').value.trim(), memo=document.getElementById('memo').value.trim();
   var L=['[바른철거 사진 견적 요청]'];
   if(val('area'))L.push('지역: '+val('area'));
   if(val('space'))L.push('공간: '+val('space'));
   if(py)L.push('평수: 약 '+py+'평');
   if(jobs)L.push('작업: '+jobs);
   if(val('when'))L.push('시기: '+val('when'));
-  if(val('close'))L.push('폐업: '+val('close'));
   if(memo)L.push('메모: '+memo);
   L.push('(사진 첨부합니다)');
   return L.join('\n');
 }
 function go(ev){
   ev.preventDefault();
-  var msg=build();
-  var pv=document.getElementById('pv');pv.textContent=msg;pv.classList.add('on');
-  document.getElementById('cp').style.display='inline-block';
+  var msg=build(), pv=document.getElementById('pv');
+  pv.textContent=msg; pv.classList.add('on'); document.getElementById('cp').style.display='inline-block';
+  trackLead('sms_form');
   var ios=/iPhone|iPad|iPod/i.test(navigator.userAgent);
-  var url='sms:'+PHONE+(ios?'&':'?')+'body='+encodeURIComponent(msg);
-  window.location.href=url;
+  window.location.href='sms:'+PHONE+(ios?'&':'?')+'body='+encodeURIComponent(msg);
   return false;
 }
-function copyMsg(){
-  var t=build();
-  if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){document.getElementById('cp').textContent='복사됨';});}
-}
+function copyMsg(){ if(navigator.clipboard){navigator.clipboard.writeText(build()).then(function(){document.getElementById('cp').textContent='복사됨';});} }
 </script>
 </body>
 </html>
