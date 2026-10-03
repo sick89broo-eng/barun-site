@@ -152,8 +152,8 @@ footer b{color:#fff}
 
 <section>
   <div class="kicker">REAL SITE</div>
-  <h2>저희가 직접 작업한 현장입니다</h2>
-  <p class="desc">인터넷 이미지가 아닌, 바른철거 팀이 찍은 실제 사진입니다.</p>
+  <h2>바른철거가 직접 작업한 현장입니다</h2>
+  <p class="desc">인터넷 이미지가 아닌, 바른철거가 현장에서 찍은 실제 사진입니다.</p>
   <div class="gal">
     <figure class="wide"><img src="img/f2.jpg" alt="지하 상가 천장·벽체 철거 작업 중" loading="lazy"><figcaption><span>철거 중</span> · 지하 상가 천장·벽체 철거</figcaption></figure>
     <figure><img src="img/e1.jpg" alt="사무실 원상복구 완료" loading="lazy"><figcaption><span>완료</span> · 사무실 원상복구</figcaption></figure>
@@ -193,7 +193,7 @@ footer b{color:#fff}
 <section id="price">
   <div class="kicker">PRICE</div>
   <h2>단가를 공개합니다</h2>
-  <p class="desc">다른 곳은 잘 안 알려주는 기준 단가입니다. 실제 금액은 현장 조건에 따라 달라집니다.</p>
+  <p class="desc">기준 단가를 그대로 적어 둡니다. 실제 금액은 현장 조건에 따라 달라집니다.</p>
   <div class="price">
     <table>
       <tr><td>천장 철거 (1겹)</td><td>평당 3만원</td></tr>
@@ -215,7 +215,7 @@ footer b{color:#fff}
   <div class="prom">
     <div><strong>추가 비용은 미리 말씀드립니다</strong><span>철거 중 추가가 생길 수 있는 경우를 견적 단계에서 먼저 안내합니다.</span></div>
     <div><strong>가게를 직접 닫아본 사람이 봅니다</strong><span>장사를 오래 해봤기에, 폐업 날 무엇이 급한지 압니다.</span></div>
-    <div><strong>사진 기록을 남깁니다</strong><span>철거 전·중·후 사진을 정리해 드립니다. 지원 제도 신청에도 쓰실 수 있습니다.</span></div>
+    <div><strong>사진 기록을 남깁니다</strong><span>철거 전·후 사진을 같은 자리에서 찍어 드립니다. 지원 제도 신청에도 쓰실 수 있습니다.</span></div>
   </div>
 </section>
 
@@ -294,6 +294,7 @@ footer b{color:#fff}
   <b>바른철거</b> · 대표 이승훈<br>
   전화 <a href="tel:01027689135" onclick="trackLead('call_footer')">010-2768-9135</a><br>
   경기 하남시 신장로 111, 601호<br>
+  <!-- 사업자등록번호: 사장님 확인 후 입력 --><br>
   전자세금계산서 발행
 </div></footer>
 
@@ -304,7 +305,8 @@ footer b{color:#fff}
 
 <script>
 /* 네이버 광고 전환 추적 — 사장님 광고계정 키(wa) 받으면 WCS_KEY 에 넣고 주석 해제 */
-var WCS_KEY='';
+var WCS_KEY=''; /* 네이버 광고 전환추적 키(wa). 사장님 계정 값 확인 후 입력 */
+if(WCS_KEY){var _w=document.createElement('script');_w.src='https://wcs.naver.net/wcslog.js';_w.onload=function(){try{if(!window.wcs_add)window.wcs_add={};wcs_add['wa']=WCS_KEY;if(window.wcs){wcs.inflow();wcs_do();}}catch(e){}};document.head.appendChild(_w);}
 function trackLead(label){
   try{ if(WCS_KEY && window.wcs){ var _conv={type:'lead'}; wcs.trans(_conv); } }catch(e){}
 }
