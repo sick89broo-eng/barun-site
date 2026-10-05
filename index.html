@@ -10,6 +10,7 @@
 <meta property="og:image" content="img/hero.jpg">
 <meta name="theme-color" content="#14233c">
 <meta name="format-detection" content="telephone=no">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2314233c'/%3E%3Ctext x='16' y='22' font-family='Pretendard,system-ui,sans-serif' font-size='18' font-weight='900' fill='%23d9ad4f' text-anchor='middle'%3E바%3C/text%3E%3C/svg%3E">
 <link rel="preload" as="image" href="img/hero.webp" type="image/webp" fetchpriority="high">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" media="print" onload="this.media='all'">
@@ -85,7 +86,7 @@ p.desc{color:var(--sub);font-size:15px;margin:-6px 0 16px}
 .gal{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .gal figure{position:relative;border-radius:12px;overflow:hidden;background:#ddd;aspect-ratio:4/5}
 .gal img{width:100%;height:100%;object-fit:cover}
-.gal figcaption{position:absolute;left:8px;bottom:8px;right:8px;font-size:12px;font-weight:700;color:#fff;background:rgba(13,24,41,.78);padding:5px 8px;border-radius:7px}
+.gal figcaption{position:absolute;left:8px;bottom:8px;right:8px;font-size:12px;font-weight:700;color:#fff;background:rgba(13,24,41,.78);padding:5px 8px;border-radius:7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .gal figcaption span{color:var(--gold2)}
 .note{font-size:13px;color:var(--sub);margin-top:10px}
 /* estimate sample */
@@ -109,6 +110,19 @@ p.desc{color:var(--sub);font-size:15px;margin:-6px 0 16px}
 .price .cap{background:#f8f4ea;font-size:13px;color:#6d5a2c;padding:10px 14px}
 .factors{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
 .factors span{background:#eef1f5;border-radius:999px;padding:6px 11px;font-size:13px;color:var(--navy)}
+/* calc */
+.calcbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 16px}
+.calcbox .cf{margin-bottom:12px}
+.calcbox .cf label{display:block;font-weight:700;font-size:15px;margin-bottom:6px;color:var(--ink)}
+.calcbox .cf label small{color:var(--sub);font-weight:400;margin-left:4px}
+.calcbox input[type=number]{width:100%;font:inherit;font-size:16px;border:1.5px solid var(--line);border-radius:10px;padding:11px 12px;background:#fff;color:var(--ink)}
+.calcbox input[type=number]:focus{outline:none;border-color:var(--gold)}
+.calcbox .out{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.calcbox .out .row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;font-size:14.5px;color:var(--sub)}
+.calcbox .out .row b{color:var(--ink);font-weight:700}
+.calcbox .out .total{margin-top:4px;padding-top:10px;border-top:1px solid var(--line);font-size:16px;color:var(--ink);font-weight:800}
+.calcbox .out .total b{color:var(--navy);font-size:19px}
+.calcbox .cta{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:14px;background:var(--navy);color:#fff;font-weight:800;font-size:16.5px;padding:14px;border-radius:12px;text-decoration:none;min-height:52px}
 /* promise */
 .prom{display:grid;gap:10px}
 .prom div{background:var(--card);border-left:4px solid var(--gold);border-radius:10px;padding:14px 16px}
@@ -308,11 +322,11 @@ footer b{color:#fff}
   <h2>바른철거가 직접 작업한 현장입니다</h2>
   <p class="desc">인터넷 이미지가 아닌, 현장에서 직접 찍은 사진입니다.</p>
   <div class="gal">
-    <figure><picture><source srcset="img/f2.webp" type="image/webp"><img src="img/f2.jpg" alt="지하 상가 천장·벽체 철거 작업 중" width="675" height="720" loading="lazy" decoding="async"></picture><figcaption><span>철거 중</span> · 지하 상가 천장·벽체</figcaption></figure>
+    <figure><picture><source srcset="img/f2.webp" type="image/webp"><img src="img/f2.jpg" alt="지하 상가 천장·벽체 철거 작업 중" width="675" height="720" loading="lazy" decoding="async"></picture><figcaption><span>철거 중</span> · 지하 천장·벽체</figcaption></figure>
     <figure><picture><source srcset="img/e1.webp" type="image/webp"><img src="img/e1.jpg" alt="사무실 원상복구 완료" width="675" height="720" loading="lazy" decoding="async"></picture><figcaption><span>완료</span> · 사무실 원상복구</figcaption></figure>
-    <figure><picture><source srcset="img/f3.webp" type="image/webp"><img src="img/f3.jpg" alt="폐기물 마대 반출 대기" width="526" height="630" loading="lazy" decoding="async"></picture><figcaption><span>반출</span> · 폐기물 마대 정리</figcaption></figure>
-    <figure><picture><source srcset="img/e2.webp" type="image/webp"><img src="img/e2.jpg" alt="상가 내부 철거·정리 완료" width="642" height="720" loading="lazy" decoding="async"></picture><figcaption><span>완료</span> · 상가 내부 철거·정리</figcaption></figure>
-    <figure><picture><source srcset="img/k1.webp" type="image/webp"><img src="img/k1.jpg" alt="식당 주방 철거 전 현장 확인" width="800" height="600" loading="lazy" decoding="async"></picture><figcaption><span>현장 확인</span> · 식당 주방 철거 전</figcaption></figure>
+    <figure><picture><source srcset="img/f3.webp" type="image/webp"><img src="img/f3.jpg" alt="폐기물 마대 반출 대기" width="526" height="630" loading="lazy" decoding="async"></picture><figcaption><span>반출</span> · 폐기물 마대</figcaption></figure>
+    <figure><picture><source srcset="img/e2.webp" type="image/webp"><img src="img/e2.jpg" alt="상가 내부 철거·정리 완료" width="642" height="720" loading="lazy" decoding="async"></picture><figcaption><span>완료</span> · 상가 내부 정리</figcaption></figure>
+    <figure><picture><source srcset="img/k1.webp" type="image/webp"><img src="img/k1.jpg" alt="식당 주방 철거 전 현장 확인" width="800" height="600" loading="lazy" decoding="async"></picture><figcaption><span>확인</span> · 식당 주방 철거 전</figcaption></figure>
     <figure><picture><source srcset="img/g2.webp" type="image/webp"><img src="img/g2.jpg" alt="베란다 바닥 철거 후 정리" width="675" height="720" loading="lazy" decoding="async"></picture><figcaption><span>정리</span> · 베란다 철거 후</figcaption></figure>
   </div>
   <p class="note">상호·얼굴·차량번호·단지명이 보이는 사진은 흐림 처리하거나 올리지 않습니다.</p>
@@ -350,11 +364,54 @@ footer b{color:#fff}
       <tr><td>폐기물 반출 (1톤 차량 1대)</td><td>35만원</td></tr>
       <tr><td>계단 양중 (2층 기준)</td><td>평당 2만원</td></tr>
     </table>
-    <div class="cap">공급가액 기준, 부가세 별도 · 1평 = 1.8m×1.8m</div>
+    <div class="cap">공급가액 기준, 부가세 별도 · 1평 ≈ 3.3㎡</div>
   </div>
   <div class="factors">
     <span>평수</span><span>층수·엘리베이터</span><span>천장 겹수</span><span>폐기물 양</span><span>주차·반출 동선</span><span>작업 시간대</span>
   </div>
+</section>
+
+<section id="calc">
+  <div class="kicker">CALC</div>
+  <h2>대략 철거비 계산</h2>
+  <p class="desc">위 단가표 그대로 더해 봅니다. 참고용 — 현장 확인 후 확정됩니다.</p>
+  <div class="calcbox">
+    <div class="cf"><label for="cc1">천장 평수 <small>(평, 1겹 기준)</small></label>
+      <input type="number" id="cc1" inputmode="numeric" min="0" max="999" placeholder="예: 20"></div>
+    <div class="cf"><label for="cc2">가벽 길이 <small>(m, 30cm당 2만원)</small></label>
+      <input type="number" id="cc2" inputmode="decimal" min="0" max="999" step="0.1" placeholder="예: 3"></div>
+    <div class="cf"><label for="cc3">폐기물 반출 <small>(1톤 차량 대수)</small></label>
+      <input type="number" id="cc3" inputmode="numeric" min="0" max="99" placeholder="예: 2"></div>
+    <div class="out">
+      <div class="row"><span>천장 철거 (평당 3만원)</span><b id="co1">0원</b></div>
+      <div class="row"><span>가벽 철거 (m당 약 6.7만원)</span><b id="co2">0원</b></div>
+      <div class="row"><span>폐기물 반출 (대당 35만원)</span><b id="co3">0원</b></div>
+      <div class="row total"><span>합계 (참고)</span><b id="co4">0원</b></div>
+    </div>
+    <p class="note">공급가액 기준, 부가세 별도 · 현장 확인 후 확정됩니다.</p>
+    <a class="cta" href="#quote" onclick="trackLead('calc_cta')">사진 보내고 정확한 견적 받기</a>
+  </div>
+</section>
+
+<section id="whyphoto">
+  <div class="kicker">WHY PHOTO</div>
+  <h2>왜 사진 먼저 받는가</h2>
+  <div class="prom">
+    <div><strong>사진이 없으면 범위가 안 보입니다</strong><span>평수와 평당 단가만으로는 어떤 공정이 몇 자리 들어가는지 모릅니다. 범위가 안 보이면 금액이 안 나옵니다.</span></div>
+    <div><strong>사진이 있어도 현장에서 다시 봅니다</strong><span>배관·단차·반출 동선처럼 사진에서 안 보이는 자리가 보통 금액을 바꿉니다. 1차 금액은 사진으로, 확정 금액은 현장 확인 뒤에 드립니다.</span></div>
+    <div><strong>사진은 추가가 생길 자리를 미리 짚습니다</strong><span>곰팡이·석면 의심·배관 매립 같은 자리는 사진 단계에서 먼저 짚어 두면 공사 중에 "말 안 하셨는데"로 올라가는 일이 줄어듭니다.</span></div>
+  </div>
+</section>
+
+<section id="howphoto">
+  <div class="kicker">HOW TO PHOTO</div>
+  <h2>어떤 사진 3장을 보내면 되나</h2>
+  <div class="prom">
+    <div><strong>1장 · 공간 전체</strong><span>입구에서 반대쪽 벽까지 한 번에 보이게 찍으시면 됩니다. 평수와 공간 모양을 같이 봅니다.</span></div>
+    <div><strong>2장 · 뜯어낼 자리</strong><span>바닥·벽·천장 중 뜯을 자리와 붙박이·간판 자리·배관이 보이게. 가까이서 찍은 사진이면 좋습니다.</span></div>
+    <div><strong>3장 · 건물 밖과 반출 자리</strong><span>건물 입구·엘리베이터·주차 자리가 보이게. 반출 동선이 보이면 운반 조건이 좁혀집니다.</span></div>
+  </div>
+  <p class="note">세 장이 안 되시면 한 장만 보내셔도 됩니다. 부족한 부분은 전화로 짚어 드립니다.</p>
 </section>
 
 <section>
@@ -481,7 +538,7 @@ function smsHref(msg){ return 'sms:'+PHONE+(IOS?'&':'?')+'body='+encodeURICompon
   var fromHash=kwMap[h]||'';
   [].forEach.call(document.querySelectorAll('.js-sms'),function(a){
     var kw=a.getAttribute('data-kw')||fromHash;
-    a.href=smsHref('[바른철거 사진 견적]'+(kw?' '+kw+' 문의':'')+'\n지역: \n평수(모르면 비워두세요): \n(사진 3장 첨부합니다)');
+    a.href=smsHref('[바른철거 사진 견적]'+(kw?' '+kw+' 문의':'')+'\n지역(예: 강동구 명일동): \n평수(모르면 비워두세요): \n(사진 3장 첨부합니다)');
   });
 })();
 function val(n){var e=document.querySelector('input[name="'+n+'"]:checked');return e?e.value:'';}
@@ -507,6 +564,23 @@ function go(ev){
   return false;
 }
 function copyMsg(){ if(navigator.clipboard){navigator.clipboard.writeText(build()).then(function(){document.getElementById('cp').textContent='복사됨';});} }
+/* 대략 철거비 계산기 — 단가표 그대로. 합계는 참고용(공급가액, 부가세 별도) */
+(function(){
+  function nf(n){return (n>0?n.toLocaleString('ko-KR'):0)+'원'}
+  function num(id){var v=parseFloat(document.getElementById(id).value);return isFinite(v)&&v>=0?v:0}
+  function calc(){
+    var a=Math.round(num('cc1')*30000);
+    var b=Math.round(num('cc2')*20000/0.3);
+    var c=Math.round(num('cc3')*350000);
+    document.getElementById('co1').textContent=nf(a);
+    document.getElementById('co2').textContent=nf(b);
+    document.getElementById('co3').textContent=nf(c);
+    document.getElementById('co4').textContent=nf(a+b+c);
+  }
+  ['cc1','cc2','cc3'].forEach(function(id){
+    var el=document.getElementById(id); if(el){el.addEventListener('input',calc)}
+  });
+})();
 </script>
 </body>
 </html>
